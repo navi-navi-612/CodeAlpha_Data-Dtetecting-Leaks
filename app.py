@@ -3,23 +3,21 @@ from cryptography.fernet import Fernet
 import re
 
 app = Flask(__name__)
+load_dotenv()  # Load values from .env
 
 # Generate and store a secure encryption key (only once in real scenarios)
 # Use: key = Fernet.generate_key()
 # Store securely and load it here:
-key = b'3FzPHTnZyUE9nQeV8K6Tt5n6Zs7UOa3fTnPxq4Ls4UM='  # Replace with your secure key
-cipher = Fernet(key)
+key = os.environ.get("FERNET_KEY").encode()
+cipher = Fernet(key)  # Replace with your secure key
+
 
 # =======================
 # 🔹 3. Admin Credentials (✅ INSERT HERE)
 # =======================
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "adminpass"
-
-# =======================
-# 🔹 4. Capability Code
-# =======================
-VALID_CAPABILITY_CODE = "secure123"
+ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME")
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD")
+VALID_CAPABILITY_CODE = os.environ.get("VALID_CAPABILITY_CODE")
 # Patterns to detect common SQL injection attempts
 SQLI_PATTERNS = [
     r"(\%27)|(\')|(\-\-)|(\%23)|(#)",
