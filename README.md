@@ -40,14 +40,6 @@ project-folder/ ├── app.py   # Flask app routes ├── utils.py   # Fir
 
 ---
 
-## ✅ Safe Files to Upload
-
-- app.py, utils.py, capability_code.py, injection_checker.py, encryption.py (AES_SECRET_KEY=your-32-byte-secret-key)
-- index.html, style.css
-- .env.example, .gitignore
-- README.md, requirements.txt
-
----
 
 ## 💻 Setup Instructions
 
