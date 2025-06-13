@@ -6,33 +6,26 @@
 
 ## 🛠️ Features
 
-- ✅ Detects SQL Injection attempts in user input
-- 🔐 AES-256 encryption for sensitive data
-- 🎫 Capability code system to control secure SQL access
-- ☁️ Firebase Realtime Database integration
-- 🔍 Prevents duplicate and false positive entries
-- 🛡️ Admin login with double-layer security
+This project is a secure web application designed to:
+
+🛡️ Detect and block SQL injection attacks
+   – It scans user input for malicious SQL patterns to prevent data leaks.
+🔒 Encrypt sensitive user data using AES-256
+   – Ensures confidential data is stored securely in the database.
+🔁 Prevent data redundancy
+   – Checks for duplicate entries and stores only unique, verified data.
+🔑 Use capability codes for controlled SQL access
+   – Only authorized SQL operations are allowed using special codes.
+👨‍💼 Provide a secure admin dashboard
+   – Admins can log in to monitor and manage submissions safely.
+☁️ Store data in Firebase Realtime Database
+   – Ensures fast, cloud-based, and real-time data storage.
 - 🌐 Built using Flask, Python, HTML, CSS
 
 ---
 
 ## 📂 Project Structure
-project-folder/ ├── app.py                 
-# Flask app routes ├── utils.py               
-# Firebase operations ├── capability_code.py     
-# Capability access control logic ├── injection_checker.py   
-# SQL injection detection ├── encryption.py         
-# AES-256 encryption ├── templates/ │ 
-└── index.html         
-# Frontend UI (user side) ├── static/ │  
-└── style.css           
-# CSS styling ├── firebase_config.json 
-# 🔒 Firebase credentials (DO NOT UPLOAD) ├── .env       
-# 🔒 Secret keys (DO NOT UPLOAD) ├── .env.example          
-# ✅ Sample .env structure ├── .gitignore            
-# Hides sensitive files from Git ├── README.md            
-# This file └── requirements.txt       
-# Python dependencies
+project-folder/ ├── app.py   # Flask app routes ├── utils.py   # Firebase operations ├── capability_code.py  # Capability access control logic ├── injection_checker.py  # SQL injection detection ├── encryption.py   # AES-256 encryption ├── templates/ │ └── index.html   # Frontend UI (user side) ├── static/ │  └── style.css   # CSS styling ├── firebase_config.json   # 🔒 Firebase credentials (DO NOT UPLOAD) ├── .env   # 🔒 Secret keys (DO NOT UPLOAD) ├── .env.example  # ✅ Sample .env structure ├── .gitignore   # Hides sensitive files from Git ├── README.md   # This file └── requirements.txt   # Python dependencies
 
 ---
 
