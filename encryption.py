@@ -2,7 +2,7 @@ from Crypto.Cipher import AES
 import base64
 import os
 
-key = os.environ.get("AES_SECRET_KEY", "12345678901234567890123456789012").encode('utf-8')  # 32 bytes
+key = os.environ.get("AES_SECRET_KEY",).encode('utf-8')  # 32 bytes
 
 def pad(data):
     return data + (16 - len(data) % 16) * chr(16 - len(data) % 16)
